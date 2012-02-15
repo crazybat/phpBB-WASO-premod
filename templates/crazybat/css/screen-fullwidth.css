@@ -1,0 +1,994 @@
+/*-------------------------------------
+Project: 
+	phpbb WASO (Web and Accessibility Standards Overhaul) - 2.0.06
+	(Based on phpbb 2.0.23 - http://phpbb.com)
+File:
+	screen-fullwidth.css
+Media: 
+	Screen
+Date: 
+	18 September 2005
+Author:
+	Marco Battilana
+	Crazy Bat Designs - http://crazybat.ca
+-------------------------------------*/
+/*-------------------------------------
+Global styles
+-------------------------------------*/
+html, body {
+	color: #000;
+	background: #ccc;
+	font: 90%/125% Tahoma, sans-serif;
+}
+a {
+	color: #333;
+	background: transparent;
+	font-weight: bold;
+}
+a:hover {
+	color: #fff;
+	background: #333;
+}
+a:active {
+	color: #333;
+	background: #fff;
+}
+acronym {
+	cursor: help;
+	border-bottom: 1px dashed #666;
+}
+caption {
+	color: #fff;
+	background: #fff;
+	font-size: 0px;
+	line-height: 0.1px;
+}
+cite {
+	font-weight: bold;
+	font-style: normal;
+}
+dl, dt, dd {
+	margin: 0;
+	padding: 2px 0;
+}
+em {
+	color: #900;
+	font-weight: bold;
+	font-style: normal;
+}
+fieldset,
+legend {
+	margin: 0 0 5px 0;
+	border: 0;
+	padding: 0;	
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+hr {
+	clear: both;
+	width: 98%;
+	height: 3px; 
+	color: #fff;
+    background: #fff;
+	border: solid 1px #999;
+}
+img {
+	border: 0;
+}
+input, select, option {
+	font-family: "Trebuchet MS", Verdana, Helvetica, sans-serif;
+}
+label {
+	display: block;
+	margin: 5px 0 0 0;
+	font-weight: bold;
+}
+ol, ul {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+.offleft,
+.skip
+{
+	position: absolute;
+	left: -9999px;
+	width: 990px;
+	overflow: hidden;
+}
+/*-------------------------------------
+Container styles
+-------------------------------------*/
+#container {
+	width: 100%;
+	background: #fff;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+/*-------------------------------------
+Leftbar and Rightbar styles
+-------------------------------------*/
+#leftbar {
+	position: absolute;
+	left: -9999px;
+	width: 990px;
+	overflow: hidden;
+}
+#rightbar {
+	position: absolute;
+	left: -9999px;
+	width: 990px;
+	overflow: hidden;
+}
+/*-------------------------------------
+Banner styles 
+-------------------------------------*/
+#banner {
+	display: block;
+	width: 750px;
+	height: 100px;
+	background: url(../images/fullwidth-theme/banner-bg.gif) top left no-repeat;
+}
+#banner h1 {
+	position: absolute;
+	left: -9999px;
+	width: 990px;
+	overflow: hidden;
+}
+#banner h2 {
+	position: absolute;
+	left: -9999px;
+	width: 990px;
+	overflow: hidden;
+}
+/*-------------------------------------
+Toolbar styles 
+-------------------------------------*/
+#toolbar {
+	float: right;
+	position: relative;
+	right: 15px;
+	width: 320px;
+	margin: -90px 0 0 0;
+	border: 0;
+	padding: 0;
+}
+#toolbar ul {
+	list-style: none;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+#toolbar ul li {
+	float: left;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+#toolbar ul li a {
+	display: block;
+	width: 80px;
+	height: 40px;
+}
+#toolbar ul li#faq a {
+	background: url(../images/default-theme/nav-faq.gif) top left no-repeat;
+}
+#toolbar ul li#search a {
+	background: url(../images/default-theme/nav-search.gif) top left no-repeat;
+}
+#toolbar ul li#memberlist a {
+	background: url(../images/default-theme/nav-memberlist.gif) top left no-repeat;
+}
+#toolbar ul li#usergroups a {
+	background: url(../images/default-theme/nav-usergroups.gif) top left no-repeat;
+}
+#toolbar ul li#register a {
+	background: url(../images/default-theme/nav-register.gif) top left no-repeat;
+}
+#toolbar ul li#profile a {
+	background: url(../images/default-theme/nav-profile.gif) top left no-repeat;
+}
+#toolbar ul li#loginpm a {
+	background: url(../images/default-theme/nav-messages.gif) top left no-repeat;
+}
+#toolbar ul li#loginlogout a {
+	background: url(../images/default-theme/nav-login-logout.gif) top left no-repeat;
+}
+/*-------------------------------------
+Style Switcher styles
+-------------------------------------*/
+#styleswitcher {
+	clear: both;
+	position: relative;
+	top: 0;
+	right: 0;
+	float: right;
+	background: url(../images/ss-bg.gif) top left no-repeat;
+	padding: 0 0 0 100px;
+}
+#styleswitcher ul {
+	list-style: none;
+}
+#styleswitcher ul li {
+	float: left;
+}
+#styleswitcher ul li a {
+	display: block;
+	width: 15px;
+	height: 15px;
+	border: solid 1px #036;
+}
+#styleswitcher ul li#ss-default a {
+	color: #333;
+	background: url(../images/ss-default-bg.gif) top left no-repeat;
+}
+#styleswitcher ul li#ss-contrast a {
+	color: #333;
+	background: url(../images/ss-contrast-bg.gif) top left no-repeat;
+}
+#styleswitcher ul li#ss-structure a {
+	color: #333;
+	background: url(../images/ss-structure-bg.gif) top left no-repeat;
+}
+#styleswitcher ul li#ss-zoom a {
+	color: #333;
+	background: url(../images/ss-zoom-bg.gif) top left no-repeat;
+}
+#styleswitcher ul li#ss-fullwidth a {
+	color: #333;
+	background: url(../images/ss-fullwidth-bg.gif) top left no-repeat;
+}
+#styleswitcher ul li#ss-subsilver-waso a {
+	color: #333;
+	background: url(../images/ss-subsilver-waso-bg.gif) top left no-repeat;
+}
+#styleswitcher ul li#ss-nostyle a {
+	color: #333;
+	background: url(../images/ss-nostyle-bg.gif) top left no-repeat;
+}
+/*-------------------------------------
+Content styles
+-------------------------------------*/
+#content {
+	color: #000;
+	background: #fff url(../images/default-theme/content-bg.gif) repeat;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+#content #content-container {
+	clear: both;
+	margin: -10px 0 0 0;
+	padding: 10px;
+}
+	/*----------
+	Content Anchor styles
+	----------*/
+#content a {
+	color: #333;
+	background: transparent;
+}
+#content a:hover {
+	color: #fff;
+	background: #333;
+}
+#content a:active {
+	color: #333;
+	background: #fff;
+}
+#content a.sublink {
+	font-size: 0.8em;
+}
+	/*----------
+	Content Definition styles
+	----------*/
+#content dt,
+#content dd {
+	color: #333;
+	background: #fff;
+}
+#content dt {
+	margin: 0;
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
+	border-top: solid 1px #999;
+	padding: 2px 5px 0 50px;
+}
+#content dd {
+	margin: 0 0 5px 0;
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
+	border-bottom: solid 1px #999;
+	padding: 0 5px 2px 0;
+}
+	/*----------
+	Content Header styles
+	----------*/
+#content h3 {
+	font: normal 1.0em "Trebuchet MS", Verdana, Helvetica, sans-serif;
+}
+#content h4 {
+	color: #036;
+	background: transparent;
+	font: normal 1.5em "Trebuchet MS", Verdana, Helvetica, sans-serif;
+}
+#content h4 a {
+	color: #036;
+	background: transparent;
+	font-weight: normal;
+}
+#content h5 {
+	margin: 5px 0 0 0;
+	font-size: 1.0em;
+}
+	/*----------
+	Content List styles
+	----------*/
+#content .highlights ul,
+#content .highlights ol {
+	margin: 0 0 0 30px;
+}
+#content .highlights ul {
+	list-style: disc;
+}
+#content ul.inlinelist {
+	margin: 0;
+	list-style: none;
+}
+#content ul.inlinelist li {
+	float: left;
+	margin: 0 3px 0 0;
+}
+	/*/////-------------------------------------
+	Content - IDs
+	/*----------
+	boxstatus ID
+	- The style that displays the status of your inbox
+	----------*/
+#content #boxstatus {
+	display: block;
+	float: right;
+	width: 170px;
+	color: #333;
+	background: #fff url(../images/default-theme/subtle-bg.gif) top left repeat;
+	margin: 5px;
+	border: solid 1px #036;
+	padding: 5px;
+	text-align: left;
+}
+#content #boxstatus img {
+	border: solid 1px #333;
+}	
+	/*----------
+	iconlegend ID
+	- The style for the icon legends, both large and small
+	----------*/
+#content #iconlegend ul {
+	list-style: none;
+	width: 650px;
+	margin: 0 auto;
+}
+#content #iconlegend ul li {
+	display: block;
+	float: left;	
+	width: 215px;
+	margin: 5px 0;
+	padding: 2px 0;
+	text-align: left;
+}
+#content .newposts {
+	color: #000;
+	background: url(../images/default-theme/newposts-2020.gif) center left no-repeat;
+}
+#content .hot {
+	color: #000;
+	background: url(../images/default-theme/nonewposts-pop-2020.gif) center left no-repeat;
+}
+#content .hotnewposts {
+	color: #000;
+	background: url(../images/default-theme/newposts-pop-2020.gif) center left no-repeat;
+}
+#content .nonewposts {
+	color: #000;
+	background: url(../images/default-theme/nonewposts-2020.gif) center left no-repeat;
+}
+#content .lockednew {
+	color: #000;
+	background: url(../images/default-theme/newposts-locked-2020.gif) center left no-repeat;
+}
+#content .locked {
+	color: #000;
+	background: url(../images/default-theme/locked-2020.gif) center left no-repeat;
+}
+#content .announcement {
+	color: #000;
+	background: url(../images/default-theme/announcement-2020.gif) center left no-repeat;
+}
+#content .announcementnew {
+	color: #000;
+	background: url(../images/default-theme/newposts-announcement-2020.gif) center left no-repeat;
+}
+#content .sticky {
+	color: #000;
+	background: url(../images/default-theme/sticky-2020.gif) center left no-repeat;
+}
+#content .stickynew {
+	color: #000;
+	background: url(../images/default-theme/newsposts-sticky-2020.gif) center left no-repeat;
+}
+#content #iconlegend li span {
+	margin: 0 0 0 25px;
+}
+#content span.newposts,
+#content span.hot,
+#content span.hotnewposts,
+#content span.nonewposts,
+#content span.lockednew,
+#content span.locked,
+#content span.announcement,
+#content span.announcementnew,
+#content span.sticky,
+#content span.stickynew {
+	float: left;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: 0 3px 0 0;
+}
+#content #largeiconlegend ul  {
+	width: 450px;
+	height: 50px;
+	margin: 0 auto;
+	list-style: none;
+}
+#content #largeiconlegend ul li {
+	float: left;
+	text-align: center;
+}	
+#content #largeiconlegend span.iconlocked,
+#content #largeiconlegend span.iconnewposts,
+#content #largeiconlegend span.iconnonewposts {
+	display: block;
+	width: 150px;
+	height: 50px;
+}
+	/*----------
+	Content moderator ID
+	- The style for the moderator commands
+	----------*/
+#content #moderatorcommands ul {
+	list-style: none;
+}
+#content #moderatorcommands ul li {
+	float: left;
+}	
+#content #moderatorcommands ul li a {
+	display: block;
+	width: 23px;
+	height: 20px;
+}	
+#content #moderatorcommands ul li#moddelete a {
+	background: url(../images/default-theme/mod-deletetopic.gif) top left no-repeat;
+}
+#content #moderatorcommands ul li#modmove a {
+	background: url(../images/default-theme/mod-movetopic.gif) top left no-repeat;
+}
+#content #moderatorcommands ul li#modlock a {
+	background: url(../images/default-theme/mod-locktopic.gif) top left no-repeat;
+}
+#content #moderatorcommands ul li#modunlock a {
+	background: url(../images/default-theme/mod-unlocktopic.gif) top left no-repeat;
+}
+#content #moderatorcommands ul li#modsplit a {
+	background: url(../images/default-theme/mod-splittopic.gif) top left no-repeat;
+}
+	/*/////-------------------------------------
+	Content - Classes
+	/*----------
+	Higlights class
+	----------*/
+#content .highlights {
+	background: #fff url(../images/default-theme/highlight-bg.gif) top left repeat-x;
+	margin: 5px;
+	border: solid 1px #ccc;
+	padding: 5px;
+}
+	/*----------
+	Horiziontal rule thindivide class
+	- The thin, white lines with a dark grey border
+	----------*/
+#content hr.thindivide {
+	width: 100%;
+	height: 1px; 
+	color: #fff;
+    background: #fff;
+	border: solid 1px #ccc;
+	padding: 0;
+}
+	/*----------
+	Icon classes
+	- Places the various icon images
+	----------*/
+#content .iconlocked,
+#content .iconnewposts,
+#content .iconnonewposts {
+	display: block;
+	float: left;
+	width: 50px;
+	height: 55px;
+}
+#content .iconlocked {
+	color: #333;
+	background: url(../images/default-theme/locked-5050.gif) 50% 50% no-repeat;
+}
+#content .iconnewposts {
+	color: #333;
+	background: url(../images/default-theme/newposts-5050.gif) 50% 50% no-repeat;
+}
+#content .iconnonewposts {
+	color: #333;
+	background: url(../images/default-theme/nonewposts-5050.gif) 50% 50% no-repeat;
+}
+#content .iconlocked strong,
+#content .iconnewposts strong,
+#content .iconnonewposts strong {
+	position: absolute;
+	left: -9999px;
+	width: 990px;
+	overflow: hidden;
+}
+#content .latestpostlink,
+#content .newestpostlink {
+	color: #333;
+	background: url(../images/default-theme/subtle-bg.gif) top left repeat;
+	border: solid 1px #ccc;
+	padding: 0 3px;
+	font-size: 0.8em;
+}
+	/*----------
+	Forum specific classes
+	- Makes up many of the style of elements throughout the forum
+	----------*/
+#content .smallnote {
+	font-size: 0.8em;
+}
+#content .messageheader {
+	padding: 5px 5px 0 5px
+}
+#content .messagebody {
+	padding: 0 5px 5px 5px;
+}
+#content .forumpostinfo {
+	float: right;
+	font-size: 0.8em;
+	text-align: right;
+}
+#content .memberinfo {
+	float: left;
+}
+#content .avatar {
+	display: block;
+	float: left;
+	padding: 4px 4px 0 4px;
+}
+#content .avatar img {
+	border: solid 1px #333;
+}
+#content .administrator {
+	color: #333;
+	background: #fff;
+	border: solid 1px #036;
+	padding: 0 3px;
+	font-weight: bold;
+}
+#content .moderator {
+	color: #036;
+	background: #fff;
+	border: solid 1px #036;
+	padding: 0 3px;
+}
+#content .row1, 
+#content .row2 {
+	clear: both;
+	margin: 5px 0;
+	border: solid 1px #999;
+}
+#content .row1 {
+	background: #eee;
+}
+#content .row2 {
+	background: #fff;
+}
+	/*----------
+	Forum function button classes
+	- The styles related to buttons found on the top and the bottom of the topic (ie: quote, delete, profile, etc.)
+	as well as the memberlist and profile pages.
+	----------*/
+#content div.messagecommands {
+	float: right;
+	padding: 0 0 5px 0;
+}
+#content div.messagecommands ul,
+#content div.membercommands ul {
+	list-style: none;
+	margin: 0 0 5px 0;
+}
+#content div.membercommands ul {
+	width: 300px;
+}
+#content div.messagecommands ul li,
+#content div.membercommands ul li {
+	float: left;
+}
+#content div.messagecommands ul li a,
+#content div.membercommands ul li a,
+#content a.smallbutton {
+	display: block;
+	width: 58px;
+	height: 18px;
+	margin: 0 2px 2px 0;
+	text-align: center;
+	text-decoration: none;
+}
+#content a.smallbutton-profile,
+#content a.smallbutton-pm,
+#content a.smallbutton-email,
+#content a.smallbutton-www,
+#content a.smallbutton-aim,
+#content a.smallbutton-icq,
+#content a.smallbutton-msnm,
+#content a.smallbutton-yim,
+#content a.smallbutton-quote,
+#content a.smallbutton-edit,
+#content a.smallbutton-delete,
+#content a.smallbutton-ip,
+#content a.smallbutton-search
+ {
+	display: block;
+	width: 59px;
+	height: 18px;	
+}
+#content a.smallbutton-profile,
+#content a.smallbutton-profile:hover,
+#content a.smallbutton-profile:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_profile.gif) center center no-repeat;
+}
+#content a.smallbutton-pm,
+#content a.smallbutton-pm:hover,
+#content a.smallbutton-pm:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_pm.gif) center center no-repeat;
+}
+#content a.smallbutton-email,
+#content a.smallbutton-email:hover,
+#content a.smallbutton-email:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_email.gif) center center no-repeat;
+}
+#content a.smallbutton-www,
+#content a.smallbutton-www:hover,
+#content a.smallbutton-www:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_www.gif) center center no-repeat;
+}
+#content a.smallbutton-aim,
+#content a.smallbutton-aim:hover,
+#content a.smallbutton-aim:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_aim.gif) center center no-repeat;
+}
+#content a.smallbutton-icq,
+#content a.smallbutton-icq:hover,
+#content a.smallbutton-icq:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_icq_add.gif) center center no-repeat;
+}
+#content a.smallbutton-msnm,
+#content a.smallbutton-msnm:hover,
+#content a.smallbutton-msnm:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_msnm.gif) center center no-repeat;
+}
+#content a.smallbutton-yim,
+#content a.smallbutton-yim:hover,
+#content a.smallbutton-yim:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_yim.gif) center center no-repeat;
+}
+#content a.smallbutton-quote,
+#content a.smallbutton-quote:hover,
+#content a.smallbutton-quote:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_quote.gif) center center no-repeat;
+}
+#content a.smallbutton-edit,
+#content a.smallbutton-edit:hover,
+#content a.smallbutton-edit:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_edit.gif) center center no-repeat;
+}
+#content a.smallbutton-delete,
+#content a.smallbutton-delete:hover,
+#content a.smallbutton-delete:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_delete.gif) center center no-repeat;
+}
+#content a.smallbutton-ip,
+#content a.smallbutton-ip:hover,
+#content a.smallbutton-ip:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_ip.gif) center center no-repeat;
+}
+#content a.smallbutton-search,
+#content a.smallbutton-search:hover,
+#content a.smallbutton-search:active {
+	color: #333;
+	background: url(../images/lang_english/dt-icon_search.gif) center center no-repeat;
+}
+	/*----------
+	BBCode classes
+	- Classes catered to bbcode
+	----------*/
+#content blockquote,
+#content pre {
+	display: block;
+	width: 90%;
+	color: #333;
+	background: #fff;
+	border: solid 1px #036;
+	margin: 5px 15px;
+	padding: 5px;
+	font: 1.0em "Courier New", serif;
+}
+#content blockquote {
+	background: url(../images/default-theme/subtle-bg.gif) top left repeat;
+}
+	/*----------
+	Posting image list classes
+	- The styles related to all posting images. (New Topic, Post Reply, Locked)
+	----------*/
+#content ul.postlist {
+	list-style: none;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+#content ul.postlist li {
+	float: left;
+	margin: 0 10px 0 0;
+	border: 0;
+	padding: 0;
+}
+#content a.postnewtopic,
+#content a.postnewtopic:hover,
+#content a.postnewtopic:active {
+	display: block;
+	width: 85px;
+	height: 27px;
+	color: #fff;
+	background: url(../images/lang_english/dt-new-topic.gif) top left no-repeat;
+}
+#content a.postreply,
+#content a.postreply:hover,
+#content a.postreply:active {
+	display: block;
+	width: 85px;
+	height: 27px;
+	color: #fff;
+	background: url(../images/lang_english/dt-post-reply.gif) top left no-repeat;
+}
+#content a.newpost,
+#content a.newpost:hover,
+#content a.newpost:active {
+	display: block;
+	width: 85px;
+	height: 27px;
+	color: #fff;
+	background: url(../images/lang_english/dt-new-post.gif) top left no-repeat;
+}
+#content a.locked,
+#content a.locked:hover,
+#content a.locked:active {
+	display: block;
+	width: 85px;
+	height: 27px;
+	color: #fff;
+	background: url(../images/lang_english/dt-reply-locked.gif) top left no-repeat;
+}
+#content a.postnewtopic span,
+#content a.postreply span,
+#content a.locked span {
+	position: absolute;
+	left: -9999px;
+	width: 990px;
+	overflow: hidden;
+}
+	/*----------
+	Overflow class
+	- The simulation of an iframe in the original design
+	----------*/
+#content .overflowy {
+	display: block;
+	height: 400px;
+	max-height: 400px;
+	overflow: auto;
+}
+#content .overflowy .grid {
+	width: 97%;
+}
+	/*----------
+	Poll classes
+	- The styles related to the polls
+	----------*/
+#content .pollbox {
+	display: block;
+	width: 250px;
+	color: #333;
+	background: #fff url(../images/default-theme/subtle-bg.gif) top left repeat;
+	margin: 0 auto;
+	border: solid 1px #036;
+	padding: 3px;
+	text-align: center;
+}
+#content .pollbox .pollchoicecontainer {
+	display: block;
+	width: 205px;
+	margin: 0 auto;
+	padding: 5px;
+	text-align: left;
+}
+#content .pollboxresults {
+	display: block;
+	width: 250px;
+	color: #333;
+	background: #fff url(../images/default-theme/subtle-bg.gif) top left repeat;;
+	margin: 0 auto;
+	border: solid 1px #036;
+	padding: 3px;
+	text-align: center;
+}
+#content .pollboxresults .pollresults {
+	display: block;
+	width: 205px;
+	margin: 0 auto;
+	text-align: left;
+}
+	/*----------
+	Page Number classes
+	- The styles related to the indicator of what page you are on and how many pages there are on the forum
+	----------*/
+#content .pagenumber {
+	float: right;
+}
+/*-------------------------------------
+Table styles
+-------------------------------------*/
+.grid {
+	clear: both;
+	color: #000;
+	background: #fff;
+	width: 100%;
+	margin: 5px 0;
+	border: solid 1px #ccc;
+	padding: 25px 2px 2px 2px;
+	font-size: 1.0em;
+	text-align: left;
+}
+.grid th {
+	color: #333;
+	background: transparent;
+	border: solid 1px #999;
+	text-align: center;
+}
+.grid tr.row1 {
+	background: #eee;
+}
+.grid tr.row2 {
+	background: #fff;
+}
+.grid td {
+	vertical-align: top;
+	padding: 5px;
+}
+	/*----------
+	Fixedwidth class
+	- The styles that sets a table column to a fixed width
+	----------*/
+.grid td.fixedwidth {
+	width: 125px;
+}
+/*-------------------------------------
+Form Control styles
+-------------------------------------*/
+label.inlinelabel {
+	display: inline;
+}
+input.boxes,
+textarea.boxes {
+	color: #333;
+	background: #fff;
+	border: solid 1px #333;
+	font: 0.9em "Trebuchet MS", Verdana, Helvetica, sans-serif;
+}
+input.button {
+	color: #fff;
+	background: #036;
+	border: solid 1px #ccc;
+	font: bold 0.9em "Trebuchet MS", Verdana, Helvetica, sans-serif;
+}
+select {
+	font-size: 0.9em;
+}
+/*-------------------------------------
+Footer styles
+-------------------------------------*/
+#footer {
+	clear: both;
+	width: 750px;
+	height: 50px;
+	color: #333;
+	background: url(../images/fullwidth-theme/footer-bg.gif) top left no-repeat;
+}
+	/*----------
+	Validation styles
+	----------*/
+#footer #validation {
+	display: block;
+	position: relative;
+	top: 0px;
+	width: 315px;
+	height: 10px;
+	margin: 0 5px;
+}
+#footer #validation ul {
+	list-style: none;
+	height: 20px;
+}
+#footer #validation ul li {
+	float: left;
+	font-size: 0.7em;
+	font-weight: normal;
+}
+#footer #validation ul li a {
+	padding: 0 5px;
+}
+#footer #validation a.adminlink {
+	color: #fff;
+	background: #036;
+}
+#footer h3 {
+	clear: both;
+	background: transparent;
+	margin: -20px 0 0 0;
+	padding: 0 5px;
+	text-align: right;
+}
+/*-------------------------------------
+Miscellaneous styles
+-------------------------------------*/
+#content div.clear {
+	clear: both;
+	line-height: 0.1px;
+}
+/*-------------------------------------
+Hacks
+-------------------------------------*/
+	/* Holly Hack: Hide From IE5/Mac \*/
+* html div,
+* html dl {
+	height: 1%;
+}
+	/* Holly Hack: Hide From IE5/Mac \*/
+
+	/*----------
+	For Opera only. That's what I get for using a percentage for base size font.
+	http://virtuelvis.com/archives/2004/01/css-for-opera-7
+	----------*/
+/*@media all and (min-width: 0px){
+html, body {
+	font: small Tahoma, sans-serif;
+}
+}*/

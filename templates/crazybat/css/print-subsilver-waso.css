@@ -1,0 +1,567 @@
+/*-------------------------------------
+Project: 
+	phpbb WASO (Web and Accessibility Standards Overhaul) - 2.0.06
+	(Based on phpbb 2.0.23 - http://phpbb.com)
+File:
+	screen-subsilver-waso.css
+Media: 
+	Screen, Projector
+Date: 
+	1 January 2006
+Author:
+	Marco Battilana
+	Crazy Bat Designs - http://crazybat.ca
+-------------------------------------*/
+/*-------------------------------------
+Global styles
+-------------------------------------*/
+html, body {
+	color: #000;
+	background: #fff;
+	font: 100%/100% Verdana, sans-serif;
+}
+a {
+	color: #000;
+	background: transparent;
+	text-decoration: none;
+}
+a:hover {
+	color: #000;
+	background: #fff;
+	text-decoration: underline;
+}
+a:active {
+	color: #333;
+	background: #fff;
+}
+acronym {
+	cursor: help;
+	border-bottom: 1px dashed #666;
+}
+caption {
+	color: #efefef;
+	background: #efefef;
+	font-size: 0px;
+	line-height: 0.1px;
+}
+cite {
+	font-weight: bold;
+	font-style: normal;
+}
+dl, dt, dd {
+	margin: 0;
+	padding: 0;
+}
+em {
+	color: #333;
+	font-weight: bold;
+	font-style: normal;
+}
+fieldset,
+legend {
+	margin: 0;
+	border: 0;
+	padding: 5px;	
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+hr {
+	clear: both;
+	width: 98%;
+	height: 3px; 
+	color: #fff;
+    background: #fff;
+	border: solid 1px #999;
+}
+img {
+	border: 0;
+}
+input, select {
+	font: 0.7em Verdana, sans-serif;
+}
+label {
+	display: block;
+	margin: 5px 0 0 0;
+	font-size: 0.6em;
+}
+ol, ul {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+.offleft,
+.skip
+{
+	position: absolute;
+	left: -9999px;
+	width: 990px;
+	overflow: hidden;
+}
+/*-------------------------------------
+Container styles
+-------------------------------------*/
+#container {
+	width: 100%;
+	background: #fff;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+/*-------------------------------------
+Leftbar and Rightbar styles
+-------------------------------------*/
+#leftbar {
+	position: absolute;
+	left: -9999px;
+	width: 990px;
+	overflow: hidden;
+}
+#rightbar {
+	position: absolute;
+	left: -9999px;
+	width: 990px;
+	overflow: hidden;
+}
+/*-------------------------------------
+Banner styles 
+-------------------------------------*/
+#banner h1,
+#banner h2 {
+	margin: 0;
+}
+#banner h1 {
+	font: bold 1.4em "Trebuchet MS", sans-serif;
+}
+#banner h2 {
+	font-size: 0.8em;
+	font-weight: normal;
+}
+/*-------------------------------------
+Toolbar styles 
+-------------------------------------*/
+#toolbar {
+	display: none;
+}
+/*-------------------------------------
+Style Switcher styles
+-------------------------------------*/
+#styleswitcher {
+	display: none;
+}
+/*-------------------------------------
+Content styles
+-------------------------------------*/
+#content {
+	color: #000;
+	background: #fff;
+}
+	/*----------
+	Content Anchor styles
+	----------*/
+#content a {
+	color: #000;
+	background: transparent;
+}
+#content a:hover {
+	color: #000;
+	background: transparent;
+	text-decoration: underline;
+}
+#content a:active {
+	color: #333;
+	background: #fff;
+}
+#content a.sublink {
+	font-size: 0.7em;
+	font-weight: bold;
+}
+	/*----------
+	Content Definition styles
+	----------*/
+#content dt,
+#content dd {
+	color: #333;
+	background: #efefef;
+}
+#content dt {
+	margin: 0;
+	padding: 0 0 0 20px;
+	font-size: 0.75em;
+	font-weight: bold;
+}
+#content dd {
+	margin: 0;
+	font-size: 0.7em;
+}
+	/*----------
+	Content Header styles
+	----------*/
+#content h3 {
+	font-size: 0.7em;
+	font-weight: bold;
+}
+#content h4 {
+	display: block;
+	height: 25px;
+	color: #000;
+	background: transparent;
+	border-bottom: solid 4px #ccc;
+	padding: 0 0 0 5px;
+	font-size: 0.75em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 1.8em;
+}
+#content h5 {
+	margin: 5px 0 0 0;
+	font-size: 0.75em;
+}
+	/*----------
+	Content Paragraph styles
+	----------*/
+#content p {
+	margin: 0 0 5px 0;
+	font-size: 0.6em;
+}
+	/*----------
+	Content List styles
+	----------*/
+#content .highlights ul,
+#content .highlights ol {
+	font-size: 0.6em;
+	margin: 0 0 0 30px;
+}
+#content .highlights ul {
+	list-style: disc;
+}
+#content ul.inlinelist {
+	margin: 0;
+	list-style: none;
+}
+#content ul.inlinelist li {
+	float: left;
+	margin: 0 3px 0 0;
+	font-size: 1.6em;
+}
+	/*/////-------------------------------------
+	Content - IDs
+	/*----------
+	boxstatus ID
+	- The style that displays the status of your inbox
+	----------*/
+#content #boxstatus {
+	display: block;
+	float: right;
+	width: 170px;
+	color: #333;
+	background: #fff;
+	margin: 5px;
+	border: solid 1px #000;
+	padding: 5px;
+	text-align: left;
+	font-size: 0.8em;
+}
+#content #boxstatus img {
+	border: solid 1px #333;
+}	
+	/*----------
+	iconlegend ID
+	- The style for the icon legends, both large and small
+	----------*/
+#content #iconlegend,
+#content #largeiconlegend {
+	display: none;
+}
+	/*/////-------------------------------------
+	Content - Classes
+	/*----------
+	Higlights class
+	----------*/
+#content .highlights {
+	background: #fff;
+	margin: 5px;
+	border: solid 2px #000;
+	padding: 2px;
+}
+	/*----------
+	Horiziontal rule thindivide class
+	- The thin, white lines with a dark grey border
+	----------*/
+#content hr.thindivide {
+	width: 100%;
+	height: 1px; 
+	color: #fff;
+    background: #fff;
+	border: solid 1px #ccc;
+	padding: 0;
+}
+	/*----------
+	Icon classes
+	- Places the various icon images
+	----------*/
+#content .latestpostlink,
+#content .newestpostlink {
+	color: #333;
+	background: #fff;
+	border: solid 1px #ccc;
+	padding: 0 3px;
+	font-size: 0.8em;
+}
+	/*----------
+	Forum specific classes
+	- Makes up many of the style of elements throughout the forum
+	----------*/
+#content .smallnote {
+	font-size: 0.85em;
+}
+#content .messageheader {
+	padding: 5px 5px 0 5px
+}
+#content .messagebody {
+	padding: 0 5px 5px 5px;
+	font-size: 0.8em;
+}
+#content .messagebody li {
+	font-size: 1.6em;
+}
+#content .forumpostinfo {
+	float: right;
+	font-size: 0.6em;
+	text-align: right;
+}
+#content .memberinfo {
+	float: left;
+	font-size: 0.7em;
+}
+#content .avatar {
+	display: block;
+	float: left;
+	padding: 4px 4px 0 4px;
+}
+#content .avatar img {
+	border: solid 1px #333;
+}
+#content .administrator {
+	color: #333;
+	background: transparent;
+	font-weight: bold;
+}
+#content .moderator {
+	color: #ccc;
+	background: transparent;
+	font-weight: bold;
+}
+#content .row1, 
+#content .row2 {
+	clear: both;
+	margin: 5px 0;
+	border: solid 1px #999;
+}
+	/*----------
+	Forum function button classes
+	- The styles related to buttons found on the top and the bottom of the topic (ie: quote, delete, profile, etc.)
+	as well as the memberlist and profile pages.
+	----------*/
+#content div.messagecommands ul,
+#content div.membercommands ul {
+	display: none;
+}
+	/*----------
+	BBCode classes
+	- Classes catered to bbcode
+	----------*/
+#content blockquote,
+#content pre {
+	display: block;
+	width: 90%;
+	color: #000;
+	background: #fff;
+	border: solid 1px #ccc;
+	margin: 5px 15px;
+	padding: 5px;
+	font: 1.1em Courier, "Courier New", serif;
+}
+	/*----------
+	Posting image list classes
+	- The styles related to all posting images. (New Topic, Post Reply, Locked)
+	----------*/
+#content ul.postlist li {
+	display: none;
+}
+	/*----------
+	Overflow class
+	- The simulation of an iframe in the original design
+	----------*/
+#content .overflowy {
+	display: block;
+	height: 400px;
+	max-height: 400px;
+	overflow: auto;
+}
+#content .overflowy .grid {
+	width: 97%;
+}
+	/*----------
+	Poll classes
+	- The styles related to the polls
+	----------*/
+#content .pollbox {
+	display: block;
+	width: 250px;
+	color: #000;
+	background: transparent;
+	margin: 0 auto;
+	padding: 3px;
+	text-align: center;
+}
+#content .pollbox .pollchoicecontainer {
+	display: block;
+	width: 205px;
+	margin: 0 auto;
+	padding: 5px;
+	text-align: left;
+}
+#content .pollboxresults {
+	display: block;
+	width: 250px;
+	color: #000;
+	background: transparent;
+	margin: 0 auto;
+	text-align: center;
+}
+#content .pollboxresults .pollresults {
+	display: block;
+	width: 205px;
+	margin: 0 auto;
+	text-align: left;
+	font-size: 0.7em;
+}
+	/*----------
+	Page Number classes
+	- The styles related to the indicator of what page you are on and how many pages there are on the forum
+	----------*/
+#content .pagenumber {
+	float: right;
+}
+/*-------------------------------------
+Table styles
+-------------------------------------*/
+.grid {
+	clear: both;
+	color: #000;
+	background: #fff;
+	margin: 0;
+	border: solid 1px #ccc;
+	padding: 0;
+	width: 100%;
+	font-size: 0.7em;
+	text-align: left;
+}
+.grid th {
+	color: #000;
+	background: transparent;
+	border: solid 1px #999;
+	padding: 5px 0;
+	text-align: center;
+}
+.grid tr.row1 {
+	background: #fff;
+}
+.grid tr.row2 {
+	background: #fff;
+}
+.grid td {
+	vertical-align: top;
+	padding: 5px;
+}
+.grid td label {
+	font-size: 0.8em;
+}
+	/*----------
+	Fixedwidth class
+	- The styles that sets a table column to a fixed width
+	----------*/
+.grid td.fixedwidth {
+	width: 125px;
+}
+/*-------------------------------------
+Form Control styles
+-------------------------------------*/
+label.inlinelabel {
+	display: inline;
+}
+input.boxes,
+textarea.boxes {
+	color: #333;
+	background: #fff;
+}
+input.button {
+	color: #000;
+	background: #fff;
+	font-weight: bold;
+}
+/*-------------------------------------
+Footer styles
+-------------------------------------*/
+#footer {
+	clear: both;
+	margin: 0 0 10px 0;
+}
+	/*----------
+	Validation styles
+	----------*/
+#footer #validation {
+	width: 320px;
+	margin: 0 auto;
+}
+#footer #validation ul {
+	list-style: none;
+	height: 20px;
+}
+#footer #validation ul li {
+	float: left;
+	font-size: 0.7em;
+	font-weight: normal;
+}
+#footer #validation ul li a {
+	padding: 0 5px;
+}
+#footer #validation a.adminlink {
+	color: #fff;
+	background: #000;
+}
+#footer h3 {
+	clear: both;
+	background: transparent;
+	text-align: center;
+	font-size: 0.65em;
+	font-weight: normal;
+	letter-spacing: -1px;
+}
+/*-------------------------------------
+Miscellaneous styles
+-------------------------------------*/
+#content div.clear {
+	clear: both;
+	line-height: 0.1px;
+}
+/*-------------------------------------
+Hacks
+-------------------------------------*/
+	/* Holly Hack: Hide From IE5/Mac \*/
+* html div,
+* html dl {
+	height: 1%;
+}
+	/* Holly Hack: Hide From IE5/Mac \*/
+
+	/*----------
+	For Opera only. That's what I get for using a percentage for base size font.
+	http://virtuelvis.com/archives/2004/01/css-for-opera-7
+	----------*/
+/*@media all and (min-width: 0px){
+html, body {
+	font: small Tahoma, sans-serif;
+}
+}*/

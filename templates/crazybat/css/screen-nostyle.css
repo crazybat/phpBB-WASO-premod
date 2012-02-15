@@ -1,0 +1,158 @@
+/*-------------------------------------
+Project: 
+	phpbb WASO (Web and Accessibility Standards Overhaul) - 2.0.06
+	(Based on phpbb 2.0.23 - http://phpbb.com)
+File:
+	screen-nostyle.css
+Media: 
+	Screen
+Date: 
+	20 September 2005
+Author:
+	Marco Battilana
+	Crazy Bat Designs - http://crazybat.ca
+-------------------------------------*/
+/*-------------------------------------
+Global styles
+-------------------------------------*/
+html, body {
+	color: #000;
+	background: #fff;
+}
+/*-------------------------------------
+Container styles
+-------------------------------------*/
+
+/*-------------------------------------
+Leftbar and Rightbar styles
+-------------------------------------*/
+
+/*-------------------------------------
+Banner styles 
+-------------------------------------*/
+
+/*-------------------------------------
+Toolbar styles 
+-------------------------------------*/
+
+/*-------------------------------------
+Style Switcher styles
+-------------------------------------*/
+
+/*-------------------------------------
+Content styles
+-------------------------------------*/
+
+	/*----------
+	Content Definition styles
+	----------*/
+
+	/*----------
+	Content Header styles
+	----------*/
+
+	/*----------
+	Content Anchor styles
+	----------*/
+
+	/*----------
+	Content List styles
+	----------*/
+
+	/*/////-------------------------------------
+	Content - IDs
+	/*----------
+	boxstatus ID
+	- The style that displays the status of your inbox
+	----------*/
+
+	/*----------
+	iconlegend ID
+	- The style for the icon legends, both large and small
+	----------*/
+
+	/*----------
+	Content moderator ID
+	- The style for the moderator commands
+	----------*/
+
+	/*/////-------------------------------------
+	Content - Classes
+	/*----------
+	Higlights class
+	----------*/
+
+	/*----------
+	Horiziontal rule thindivide class
+	- The thin, white lines with a dark grey border
+	----------*/
+
+	/*----------
+	Icon classes
+	- Places the various icon images
+	----------*/
+
+	/*----------
+	Forum specific classes
+	- Makes up many of the style of elements throughout the forum
+	----------*/
+
+	/*----------
+	Forum function button classes
+	- The styles related to buttons found on the top and the bottom of the topic (ie: quote, delete, profile, etc.)
+	as well as the memberlist and profile pages.
+	----------*/
+
+	/*----------
+	BBCode classes
+	- Classes catered to bbcode
+	----------*/
+
+	/*----------
+	Posting image list classes
+	- The styles related to all posting images. (New Topic, Post Reply, Locked)
+	----------*/
+
+	/*----------
+	Overflow class
+	- The simulation of an iframe in the original design
+	----------*/
+
+	/*----------
+	Poll classes
+	- The styles related to the polls
+	----------*/
+
+	/*----------
+	Page Number classes
+	- The styles related to the indicator of what page you are on and how many pages there are on the forum
+	----------*/
+
+/*-------------------------------------
+Table styles
+-------------------------------------*/
+
+	/*----------
+	Fixedwidth class
+	- The styles that sets a table column to a fixed width
+	----------*/
+
+/*-------------------------------------
+Form Control styles
+-------------------------------------*/
+
+/*-------------------------------------
+Footer styles
+-------------------------------------*/
+
+	/*----------
+	Validation styles
+	----------*/
+
+/*-------------------------------------
+Miscellaneous styles
+-------------------------------------*/
+
+/*-------------------------------------
+Hacks
+-------------------------------------*/
