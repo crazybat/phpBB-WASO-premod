@@ -1,0 +1,612 @@
+====================================================================================
+Project: 
+phpBB Web and Accessibility Standards Overhaul (phpBB WASO)
+Based on phpbb 2.0.23 - http://phpbb.com
+
+phpBB WASO Version:
+2.0.06
+
+Date: 
+06 March 2008
+
+Author:
+Marco Battilana - crazybat@gmail.com
+Crazy Bat Designs - http://crazybat.ca
+
+Notes:
+The overall goal of these MOD and style changes are;
+	- Attempting to meet the W3C Web Content Accessibility Guidelines - Level A 
+	- Striving to validate all forum pages as XHTML 1.0 Strict 
+	- Separating structure/semantics from presentation using CSS for layout
+
+
+Installation Notes:
+REMEMBER TO BACK UP YOUR FILES BEFORE APPLYING THIS MOD AS MANY FILES WILL BE OVERWRITTEN!!!
+
+Installation using EasyMOD v0.3.0
+To install;
+
+	- Unzip the file 'phpbb-waso-2006-mod.zip' into your forum admin/mods directory. (ie: http://yoursite.com/forums/admin/mods/)
+	- Log in with your administration name and password to access your Administration panel 
+	- In the admin panel, navigate to 'MOD center', then 'Install MODs' 
+	- Enter your EasyMOD Password, then 'Access EasyMOD' 
+	- You should see in your list of 'Unprocessed MODs', you should see a listing for 'phpBB WASO'. Inline with this listing, select 'Process' 
+	- You will see 'Step 1 of 3 - Processing completed successfully!'. If so, then select 'Next Step' 
+	- You will then see 'Step 2 of 3 - Proposed Database Alterations'. For this MOD, this is not applicable. Therefore, select 'Complete Installation' 
+	- You will then see 'Step 3 of 3 - Installation Complete!'. Feel free to see the list of changes to the applicable files 
+	- In the admin panel, navigate to 'Style Admin', then 'Add' 
+	- You should see 'crazybat' as one of the themes available. If so, select 'install'. If successful, you should see 'The selected theme has been installed successfully'
+	- Navigate to 'General Admin', then 'Configuration' 
+	- Next to 'Default Style', choose 'crazybat' as the style 
+	- Next to 'Override user style - Replaces users style with the default', choose 'Yes'
+	- Hit 'Submit' 
+	- Navigate to 'Administration' and go to 'Forum Index'. Your phpBB WASO MOD should now be visible. 
+
+Manual preMOD Installation
+To install;
+
+	- Unzip the file 'phpbb-waso-2006-premod.zip' into your forum directory. (ie: http://yoursite.com/forums/) 
+	- You will be warned that files of the same name will be overwritten. Select 'Yes' to overwrite the necessary files 
+	- Navigate to your forums with your browser of choice 
+	- Log in with your administration name and password to access your Administration panel 
+	- In the admin panel, navigate to 'Style Admin', then 'Add' 
+	- You should see 'crazybat' as one of the themes available. If so, select 'install'. If successful, you should see 'The selected theme has been installed successfully'
+	- Navigate to 'General Admin', then 'Configuration' 
+	- Next to 'Default Style', choose 'crazybat' as the style 
+	- Next to 'Override user style - Replaces users style with the default', choose 'Yes'
+	- Hit 'Submit' 
+	- Navigate to 'Administration' and go to 'Forum Index'. Your phpBB WASO MOD should now be visible. 
+	
+Again, please take the appropriate caution when using these files. I have taken great care to assure quality assurance, but please remember to back up your files before installing this MOD.
+====================================================================================
+====================================================================================
+**Changes to the forum front-end and functionality**
+====================================================================================
+
+Revision History
+------------------------------------------------------------------------------------
+Version 2.0.06 - 06 March 2008
+------------------------------------------------------------------------------------
+
+groupcp.php
+privmsg.php
+includes/functions.php
+includes/functions_admin.php
+    * Incorporate phpBB 2.0.23 fixes
+	
+search.php
+    * Fixed syntax error
+	
+templates/crazybat/overall_header.tpl
+    * Changed the "favicon" path from an absolute to a relative reference
+	* Changed the path of the heading 1 link from the host's site root to the forum's site root (e.g: From "http://yoursite.com" to "http://yoursite.com/yourforumdirectory/"
+	* Removed the "leftbar" and "rightbar" containers
+
+templates/crazybat/css/screen-subsilver.css
+	* Some recommended style changes. Thank you Mike :)
+
+------------------------------------------------------------------------------------
+Version 2.0.05 - 19 December 2007
+------------------------------------------------------------------------------------
+
+groupcp.php
+memberlist.php
+modcp.php
+posting.php
+privmsg.php
+search.php
+viewforum.php
+viewtopic.php
+includes/functions.php
+includes/usercp_register.php
+language/lang_main.php
+    * Incorporate phpBB 2.0.22 fixes
+
+------------------------------------------------------------------------------------
+Version 2.0.04 - 17 June 2006
+------------------------------------------------------------------------------------
+
+The phpBB WASO is now compatible with EasyMOD v0.3.0
+
+index.php
+memberlist.php
+modcp.php
+posting.php
+privmsg.php
+search.php
+includes/bbcode.php
+includes/functions.php
+includes/usercp_register.php
+language/lang_main.php
+    * Incorporate phpBB 2.0.20 fixes
+	
+privmsg.php
+search.php
+viewtopic.php
+includes/functions.php
+includes/usercp_register.php
+    * Incorporate phpBB 2.0.21 fixes
+
+templates/crazybat/memberlist_body.tpl
+templates/crazybat/modcp_split.tpl
+templates/crazybat/modcp_viewip.tpl
+templates/crazybat/overall_header.tpl
+templates/crazybat/page_header.tpl
+templates/crazybat/posting_body.tpl
+templates/crazybat/posting_preview.tpl
+templates/crazybat/posting_smilies.tpl
+templates/crazybat/posting_topic_preview.tpl
+templates/crazybat/privmsg.tpl
+templates/crazybat/privmsg_body.tpl
+templates/crazybat/privmsg_preview.tpl
+templates/crazybat/profile_add_body.tpl
+templates/crazybat/search_username.tpl
+templates/crazybat/viewtopic_body.tpl
+	* Added various 'lang' tokens for common terms
+
+templates/subSilver/screen-subsilver-waso.css	
+	* Added to work with the changes to the default subSilver templates	
+
+templates/subSilver/index_body.tpl
+templates/subSilver/modcp_body.tpl
+templates/subSilver/overall_header.tpl
+templates/subSilver/overall_footer.tpl
+templates/subSilver/privmsgs_body.tpl
+templates/subSilver/privmsgs_read_body.tpl
+templates/subSilver/search_results_posts.tpl
+templates/subSilver/search_results_topics.tpl
+templates/subSilver/viewforum_body.tpl
+templates/subSilver/viewtopic_body.tpl
+	* Various changes to keep the look and feel of the default subSilver style with a vanilla installation of phpBB combined with the WASO MOD
+
+------------------------------------------------------------------------------------
+Version 2.0.03 - 1 January 2006
+------------------------------------------------------------------------------------
+
+phpbb-waso-2003-mod.txt
+
+    * Retained the code's original indents
+
+groupcp.php
+
+    * Added a missing 'alt' attribute
+
+groupcp.php, index.php, memberlist.php, modcp.php, privmsg.php, search.php, viewforum.php, viewonline.php, viewtopic.php, includes/page_header.php, includes/page_tail.php, includes/usercp_viewprofile.php
+
+    * Added $lang variables to account for Internationalization
+
+includes/page_header.php
+
+    * Added title attributes to account for a further description of when a user is an Administrator or a Moderator
+
+lang_main.php
+
+    * Added embedded English text from the templates to account for Internationalization
+    * Added 2 'lang' tokens to signify when a user is an administrator and a moderator
+    * Improved wording for screen reader access
+
+Two new Cascading Style Sheets have been added. They are;
+
+    * screen-subsilver-waso.css - An adaptation of the existing subSilver style (which also shows you can leverage off of any other installed styles)
+    * print-subsilver-waso.css - The default print Style Sheet that is applied with screen-subsilver-waso.css
+
+templates/crazybat/faq_body.tpl
+
+    * Added horizontal rules to better separate the individual questions
+
+templates/crazybat/groupcp_info_body.tpl
+
+    * Added paragraphs for better presentation of information
+
+templates/crazybat/index_body.tpl
+
+    * Removed the Administrator and Moderator legend. Instead, a title attribute will show you the necessary information
+
+templates/crazybat/modcp_move.tpl, modcp_body.tpl, modcp_split.tpl
+
+    * Removed excess paragraph elements
+
+Note: The code changes made from phpBB 2.0.19 release did not affect phpBB WASO version 2.0.02. Hence, phpBB WASO version 2.0.02 and version 2.0.03 will both work with the latest phpBB release. However, it is recommended that you always install the latest version of phpBB.
+
+------------------------------------------------------------------------------------
+Version 2.0.02 - 3 December 2005
+------------------------------------------------------------------------------------
+
+Installation instructions
+
+    * Changed the installation instructions for both preMOD and MOD packages to not delete the subSilver style
+
+viewforum.php
+
+    * Removed image for 'View Newest Post' and replaced with a text link
+
+includes/usercp_register.php
+
+    * Fixed a parse error - Thanks Emmanuel!
+
+templates/crazybat/css/*.css
+
+    * Various Style Sheet changes to accommodate for above changes to layout
+
+templates/crazybat/index_body.tpl
+
+    * Changed the display of Topic and Posts information
+    * Improved wording for screen reader access - Thanks damo!
+
+templates/crazybat/viewforum_body.tpl
+
+    * Changed the placement of 'View Newest Post' to appear after the topic link
+
+------------------------------------------------------------------------------------
+Version 2.0.01 - 1 November 2005
+------------------------------------------------------------------------------------
+
+groupcp.php, index.php, memberlist.php, modcp.php, posting.php, privmsg.php, search.php, viewtopic.php, includes/bbcode.php, includes/functions.php, includes/functions_admin.php, includes/functions_search.php, includes/page_header.php, includes/page_tail.php, includes/usercp_register.php, includes/usercp_viewprofile.php, language/lang_english/lang_main.php, templates/crazybat/index_body.tpl, templates/crazybat/login_body.tpl
+
+    * Incorporated phpBB 2.0.18 fixes
+
+------------------------------------------------------------------------------------
+Version 2.0.00 - 16 October 2005
+------------------------------------------------------------------------------------
+
+All template files (.tpl) have been revisited (based on feedback). They have been further refined for;
+
+    * Striving to further meet Web Content Accessibility Guidelines - Level A
+    * Striving for further adherence to W3C Standards for XHTML 1.0 Strict (where possible)
+    * Improved semantics
+    * Improved document structure
+
+templates/crazybat/css/*.css
+
+Six Cascading Style Sheets have replaced the original three files. They are;
+
+    * screen-default.css - The default screen and projector Style Sheet with the usual nice looking gradients, graphics, etc.
+    * screen-contrast.css - Same as the screen-default.css, only with inverted colours.
+    * screen-structure.css - The Style Sheet that gives you a breakdown of the major structural elements that make up this MOD. Basically, to give you a visual clue as to where the different content fits in the structure of the document.
+    * screen-zoom.css - Same as the screen-default.css, only with a text size of 110%.
+    * screen-fullwidth.css - Same as the screen-default.css, only with a width of 100%.
+    * screen-nostyle.css - The document with no style applied.
+    * print-default.css - The default print Style Sheet that is applied with screen-default.css.
+    * print-contrast.css - The default print Style Sheet that is applied with screen-contrast.css.
+    * print-structure.css - The default print Style Sheet that is applied with screen-structure.css.
+    * print-zoom.css - The default print Style Sheet that is applied with screen-zoom.css.
+    * print-fullwidth.css - The default print Style Sheet that is applied with screen-fullwidth.css.
+
+templates/crazybat/js/scripts.js
+
+    * Added external Javascript file to implement the use of A List Apart's client side Style Sheet switching method within the forum.
+
+crazybat.cfg
+
+    * Image paths were changed to accommodate for the different folder structure with the images assigned to the default theme
+
+about.php
+
+    * File created
+
+groupcp.php
+
+    * Each anchor now has a unique class assigned to differentiate the buttons. (IE: profile, pm, email, etc.) as well as a span element within if you wish to modify the text inside the anchor with the Style Sheet
+
+index.php
+
+    * Removed image for 'View Latest Post' and replaced with a text link
+
+memberlist.php
+
+    * Each anchor now has a unique class assigned to differentiate the buttons. (IE: profile, pm, email, etc.) as well as a span element within if you wish to modify the text inside the anchor with the Style Sheet
+
+modcp.php
+
+    * Added label elements to match with check boxes
+    * Changed reference of search image to be dictated by Style Sheet
+    * Changed references of the image that dictate what type of post you are viewing (ie: Sticky, Announcement, etc.) to now be dictated by Style Sheet
+
+privmsg.php
+
+    * Incorporated phpBB 2.0.17 fixes
+    * Each anchor now has a unique class assigned to differentiate the buttons. (IE: profile, pm, email, etc.) as well as a span element within if you wish to modify the text inside the anchor with the Style Sheet
+    * Changed instances of the ampersand to the proper escape character
+    * Changed references of the image that dictate what type of post you are viewing (ie: Sticky, Announcement, etc.) to now be dictated by Style Sheet
+
+search.php
+
+    * Removed image for 'View Latest Post' and replaced with a text link
+    * Changed references of the image that dictate what type of post you are viewing (ie: Sticky, Announcement, etc.) to now be dictated by Style Sheet
+
+viewforum.php
+
+    * Changed references of the image that dictate what type of post you are viewing (ie: Sticky, Announcement, etc.) to now be dictated by Style Sheet
+    * Removed image for 'View Latest Post' and replaced with a text link
+
+viewonline.php
+
+    * Replaced <b>xxx</b> with <strong>xxx</strong>
+
+viewtopic.php
+
+    * Incorporated phpBB 2.0.16 fixes
+    * Incorporated phpBB 2.0.17 fixes
+    * Each anchor now has a unique class assigned to differentiate the buttons. (IE: profile, pm, email, etc.) as well as a span element within if you wish to modify the text inside the anchor with the Style Sheet
+    * For the moderator controls (delete topic, move topic, lock/unlock topic and split topic) each control now has a unique id assigned to differentiate the buttons as well as a span element within if you wish to modify the text inside the anchor with the Style Sheet
+
+includes/bbcode.php
+
+    * Incorporated phpBB 2.0.16 fixes
+    * Incorporated phpBB 2.0.17 fixes
+
+includes/functions.php
+
+    * Incorporated phpBB 2.0.17 fixes
+
+includes/functions_admin.php
+
+    * Added id attribute to select tag to match with label
+
+includes/page_tail.php
+
+    * Removed two <br/> elements after the admin link
+    * Added title and class attribute to anchor
+
+includes/usercp_register.php
+
+    * Incorporated phpBB 2.0.16 fixes
+
+includes/usercp_viewprofile.php
+
+    * Incorporated phpBB 2.0.17 fixes
+    * Each anchor now has a unique class assigned to differentiate the buttons. (IE: profile, pm, email, etc.) as well as a span element within if you wish to modify the text inside the anchor with the Style Sheet
+
+language/lang_english/lang_main.php
+
+    * Added title variable for new 'about.php' template. (This page you are looking at)
+    * Added 2 'lang' tokens for 'New Announcements' and 'New Sticky'
+    * Improved wording for screen reader access
+
+------------------------------------------------------------------------------------
+Version 1.0.05 - 25 June 2005
+------------------------------------------------------------------------------------
+
+groupcp.php
+
+    * Incorporated phpBB 2.0.15 fixes
+
+viewtopic.php
+
+    * Incorporated phpBB 2.0.15 fixes
+
+includes/bbcode.php
+
+    * Incorporated phpBB 2.0.15 fixes
+
+includes/usercp_register.php
+
+    * Incorporated phpBB 2.0.15 fixes
+
+includes/usercp_viewprofile.php
+
+    * Incorporated phpBB 2.0.15 fixes
+
+language/lang_english/lang_main.php
+
+    * Incorporated phpBB 2.0.15 fixes
+
+------------------------------------------------------------------------------------
+Version 1.0.04 - 24 June 2005
+------------------------------------------------------------------------------------
+
+privmsg.php
+
+    * Incorporated phpBB 2.0.14 fixes
+
+search.php
+
+    * Incorporated phpBB 2.0.14 fixes
+
+viewtopic.php
+
+    * Incorporated phpBB 2.0.14 fixes
+
+includes/page_header.php
+
+    * Incorporated phpBB 2.0.14 fixes
+
+------------------------------------------------------------------------------------
+Version 1.0.03 - 4 June 2005
+------------------------------------------------------------------------------------
+
+faq.php
+
+    * Changed anchor reference to textual (ie:xxx0, xxx1, etc) and to coincide with anchor id.
+
+viewforum.php
+
+    * Changed message items (quote, edit, delete, ip, profile, web, aim, etc.) to be encompassed by list elements. These are assumed to be part of an unordered list with viewtopic_body.tpl)
+
+------------------------------------------------------------------------------------
+Version 1.0.02 - 28 March 2005
+------------------------------------------------------------------------------------
+
+groupcp.php
+
+    * Removed multiple instances of the border attribute
+
+index.php
+
+    * Removed multiple instances of the border attribute
+
+memberlist.php
+
+    * Added id attributes to select tags
+
+posting.php
+
+    * Removed multiple instances of the target attribute
+
+privmsg.php
+
+    * Removed multiple instances of the border attribute
+
+search.php
+
+    * Removed multiple instances of the border attribute
+
+viewforum.php
+
+    * Removed multiple instances of the border attribute
+
+viewonline.php
+
+    * Replaced <i>xxx</i> with <em>xxx</em>
+
+viewtopic.php
+
+    * Removed multiple instances of the border attribute
+
+includes/bbcode.php
+
+    * Removed multiple instances of the border attribute
+
+includes/functions.php
+
+    * Added id attribute to select tag
+
+includes/functions_selects.php
+
+    * Added id attributes to select tags
+
+includes/usercp_viewprofile.php
+
+    * Removed multiple instances of the border attribute
+
+language/lang_english/lang_bbcode.php
+
+    * Removed multiple instances of the border attribute
+    * Replaced <u>xxx</u> and <i>xxx</i> with <em>xxx</em> and removed references to underlining text
+    * Removed multiple instances of the target attribute
+
+language/lang_english/lang_faq.php
+
+    * Removed multiple instances of the target attribute
+
+language/lang_english/lang_main.php
+
+    * Removed instance of the target attribute
+    * Replaced <u>xxx</u> with <em>xxx</em>
+
+------------------------------------------------------------------------------------
+Version 1.0.01 - 25 March 2005
+------------------------------------------------------------------------------------
+
+viewforum.php
+
+    * Added id attributes to match with various label elements
+
+viewtopic.php
+
+    * Added critical update (as per phpBB 2.0.13)
+
+------------------------------------------------------------------------------------
+Version 1.0.00 - 25 March 2005
+------------------------------------------------------------------------------------
+
+All template files (.tpl) have been completely altered for;
+
+    * Striving to meet Web Content Accessibility Guidelines - Level A
+    * Striving for adherence to W3C Standards for XHTML 1.0 Strict (where possible)
+    * Semantics
+    * Improved document structure
+
+templates/crazybat/css/*.css
+
+Three new Cascading Style Sheets have been created. They are;
+
+    * screen.css - The default screen and projector Style Sheet
+    * screen-bw.css - A example to illustrate the drastic change of style by Style Sheet switching
+    * print.css - The default print Style Sheet
+
+group.php
+
+    * Replaced images with anchors. Each anchor is classed as 'smallbutton' so the Style Sheet can dictate an image if you so desire.
+
+index.php
+
+    * Changed 'folder_img', 'folder_alt', to use only 'folder_img', respectfully. 'folder_img' now defines the entire image element. (ie: <div class="iconclass"><span>whatever text</span></div>). This allows the Style Sheet to control the image used for these icons.
+    * The 'View Latest Post image' was removed. Seemed redundant.
+
+memberlist.php
+
+    * Replaced images with anchors. Each anchor is classed as 'smallbutton' so the Style Sheet can dictate an image if you so desire.
+
+posting.php
+
+    * Added label elements to match with radio buttons
+
+privmsg.php
+
+    * Replaced <span><b>xxx</b></span> with <strong>xxx</strong>
+    * Added 'title' attributes to anchors
+    * Removed various 'target="_phpbbcode"' attributes
+
+search.php
+
+    * Replaced <span><b>xxx</b></span> with <strong>xxx</strong>
+
+viewforum.php
+
+    * Added label elements to match with various form elements
+    * 'post_img' now defines the entire link. (ie: <a href="newtopic.php" title="Create a new topic" class="postnewtopic"><span>New Topic</span></a>). This allows the CSS to control the image used for these two items.
+    * Added 'new_topic_url' to be accepted by 'POST_IMG'
+
+viewtopic.php
+
+    * Added 'title' attributes to anchors and removed references to images.
+    * Replaced <span><b>xxx</b></span> with <strong>xxx</strong>
+    * Replaced images with anchors. Each anchor is classed as 'smallbutton' so the Style Sheet can dictate an image if you so desire.
+    * Changed post_img, post_alt, reply_img and reply_alt to use only post_img and reply_img, respectfully. post_img and reply_img now define the entire link. (ie: <a href="newtopic.php" title="Create a new topic" class="postnewtopic"><span>New Topic</span></a>). This allows the CSS to control the image used for these two items.
+
+includes/functions.php
+
+    * Replaced <b>xxx</b> with <strong>xxx</strong>
+
+includes/functions_search.php
+
+    * Changed to encompass 2 character search.
+
+includes/page_header.php
+
+    * Changed <b> to <strong>, <i> to <em> and replaced references of inline span styles to span classes. Style Sheet to dictate.
+
+includes/page_tail.php
+
+    * Replaced <span><b>xxx</b></span> with <strong>xxx</strong>
+    * Added title attributes to anchors
+
+includes/session.php
+
+    * Included critical update (as per phpBB 2.0.13)
+
+includes/usercp_register.php
+
+    * Added title attributes to anchors
+    * Removed 'target="_phpbbcode"'
+
+includes/usercp_viewprofile.php
+
+    * Replaced images with anchors. Each anchor is classed as 'smallbutton' so the Style Sheet can dictate an image if you so desire.
+
+language/lang_english/lang_bbcode.php
+
+    * Replaced <b>xxx</b> with <strong>xxx</strong>
+
+language/lang_english/lang_faq.php
+
+    * Replaced <u>xxx</u> with <em>xxx</em>
+
+language/lang_english/lang_main.php
+
+    * Changed the link text to make sense in context (ie: 'View your Message' vs. 'Click Here')
+    * Replaced <b>xxx</b> with <strong>xxx</strong>
+
+------------------------------------------------------------------------------------
+~ end of line
